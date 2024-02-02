@@ -1,14 +1,10 @@
 import styles from './task.module.css';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { TbTrash } from 'react-icons/tb';
 
-export function Task({ task, onDelete, onComplete }) {
+export function Task({ task, onDelete}) {
   return (
     <div className={styles.task}>
-      <button className={styles.checkContainer} onClick={() => onComplete(task.id)}>
-        {task.isCompleted ? <BsFillCheckCircleFill /> : <div />}
-      </button>
-
+     <input type="checkbox" />
       <p className={task.isCompleted ? styles.textCompleted : ""}>
         {task.title}
       </p>

@@ -1,5 +1,5 @@
 .header {
-  background: #0D0D0D;
+  background:white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,11 +21,11 @@
 .newTaskForm input {
   height: 100%;
   flex: 1;
-  color: #fff;
-  background: #262626;
+  color:black;
+  background:white;
   border: 1px solid #0D0D0D;
   border-radius: 8px;
-  padding: 0 16px;
+  padding: 0px 16px;
   font-size: 16px;
 }
 
@@ -35,14 +35,15 @@
 
 .newTaskForm button {
   height: 100%;
-  padding: 0 16px;
-  background: #1E6F9F;
+  padding: 0 23px;
+  margin-left:-20px;
+  background:rgb(23, 140, 190);
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
   display: flex;
   align-items: center;
-  gap: 6px;
   font-weight: 700;
   font-size: 14px;
 }

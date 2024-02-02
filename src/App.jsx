@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { Tasks } from "./components/Tasks";
 
-const LOCAL_STORAGE_KEY = 'todo:tasks';
+const LocalStorager = 'todo:tasks';
 
 function App() {
   const [tasks, setTasks] = useState([]);
 
   function loadSavedTasks() {
-    const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const saved = localStorage.getItem(LocalStorager);
     if(saved) {
       setTasks(JSON.parse(saved));
     }
@@ -16,7 +16,7 @@ function App() {
 
   function setTasksAndSave(newTasks) {
     setTasks(newTasks);
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+    localStorage.setItem(LocalStorager, JSON.stringify(newTasks));
   }
 
   useEffect(() => {
